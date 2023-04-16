@@ -614,9 +614,9 @@ main .recent-orders a{
     }
 
     @keyframes showMenu {
-        to {
-            left: 0;
-        }
+      to {
+        left: 0;
+      }
     }
 
     aside .logo {
