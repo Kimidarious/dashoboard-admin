@@ -22,7 +22,18 @@
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
 
-    --box-shadow: 0.2rem 3rem var(--color-light);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 /*==============DARK THEMES VARIABLES*/
@@ -34,15 +45,10 @@
     --color-light: rgba(0, 0, 0, 0.4);
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    appearance: none;
-    border: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+
+.logo img {
+    width: 100%;
+    display: block;
 }
 
 html{
@@ -68,6 +74,7 @@ body{
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
 }
+
 a{
     color: var(--color-dark);
 }
@@ -138,7 +145,6 @@ b{
 
 aside {
     height: 100vh;
-    background: gray;
 }
 
 aside .top{
@@ -166,7 +172,6 @@ aside .close {
 /*=======SIDEBAR========= */ 
 
 aside .sidebar{
-    background: white;
     display: flex;
     flex-direction: column;
     height: 86vh;
@@ -215,7 +220,7 @@ aside .sidebar a.active:before {
 
 aside .sidebar a.active span {
     color: var(--color-primary);
-    margin-left: calc(1rem - 1);
+    margin-left: calc(1rem - 3px);
 }
 
 aside .sidebar a:hover {
@@ -282,12 +287,10 @@ main .insights > div span {
 
 main .insights > div.expenses span {
     background: var(--color-danger);
-
 }
 
 main .insights > div.income span {
-    background: var(--color-success);
-    
+    background: var(--color-success);    
 }
 
 main .insights > div .middle {
@@ -397,21 +400,20 @@ main .recent-orders a{
 
 /*--------------------RIGHT-------------------------*/
 .right{
-    margin-top: 1.4rem;
+    margin-top: 0rem;
 }
 
 .right .top{
     display: flex;
     justify-content: end;
     gap: 2rem;
-    background: gray;
 }
 
 .right .top button{
     display: none;
 }
 
-.right .theme-toggler{
+.right .theme-toggler {
     background: var(--color-light);
     display: flex;
     justify-content: space-between;
@@ -496,7 +498,7 @@ main .recent-orders a{
     box-shadow: none;
 }
 
-.right .sales-analytics .item:hover .right {
+.right .sales-analytics .item .right {
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -594,6 +596,7 @@ main .recent-orders a{
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
+        grid-template-columns: 1fr;
     }
 
     aside {
@@ -692,7 +695,7 @@ main .recent-orders a{
         display: inline-block;
         background: transparent;
         cursor: pointer;
-        color: var(--color-danger);
+        color: var(--color-dark);
         position: absolute;
         left: 1rem;
     }
