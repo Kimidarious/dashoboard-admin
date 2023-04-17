@@ -22,18 +22,18 @@ themeToggler.addEventListener("click", () => {
 });
 
 //preenche pedidos na tabela
-Orders.forEach(order => {
+Orders.forEach((order) => {
   const tr = document.createElement("tr");
   const trContent = `
                         <td>${order.productName}</td>
                         <td>${order.productNumber}</td>
                         <td>${order.paymentStatus}</td>
                         <td class="${
-                          order.shipping === 'Cancelado'
-                            ? 'danger'
-                            : order.shipping === 'Pendente'
-                            ? 'warning'
-                            : 'primary'
+                          order.shipping === "Cancelado"
+                            ? "danger"
+                            : order.shipping === "Pendente"
+                            ? "warning"
+                            : "primary"
                         }">${order.shipping}</td>
                         <td class="primary">Detalhes</td>`;
   tr.innerHTML = trContent;
